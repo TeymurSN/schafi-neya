@@ -1,0 +1,405 @@
+:root {
+    --navy:#142b40;
+    --ink:#172331;
+    --muted:#4b5560;
+    --blue:#2d7398;
+    --warm:#f4f0eb;
+    --max:1120px
+}
+* {
+    box-sizing:border-box
+}
+html {
+    scroll-behavior:smooth
+}
+body {
+    margin:0;
+    color:var(--ink);
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:16px;
+    line-height:1.55
+}
+h1,h2,h3,p {
+    margin-top:0
+}
+h1,h2,h3 {
+    color:var(--navy)
+}
+h1,h2 {
+    font-family:Georgia,'Times New Roman',serif;
+    line-height:1.15
+}
+h2 {
+    font-size:clamp(1.8rem,3vw,2.5rem);
+    margin-bottom:16px
+}
+a {
+    color:inherit
+}
+a:hover {
+    color:var(--blue)
+}
+.container {
+    width:min(var(--max),calc(100% - 64px));
+    margin:auto
+}
+.site-header {
+    background:#fff;
+    position:relative;
+    z-index:5
+}
+.header-inner {
+    min-height:74px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:28px
+}
+.brand {
+    text-decoration:none;
+    font-family:Georgia,serif;
+    font-weight:bold;
+    font-size:1.28rem;
+    color:var(--navy);
+    white-space:nowrap
+}
+.brand span {
+    font:normal .7rem Arial,sans-serif;
+    letter-spacing:.07em;
+    border-left:1px solid #8c939a;
+    margin-left:18px;
+    padding-left:18px;
+    vertical-align:middle
+}
+.site-header nav {
+    display:flex;
+    gap:24px;
+    flex-wrap:wrap
+}
+.site-header nav a {
+    text-decoration:none;
+    font-size:.85rem
+}
+.hero {
+    position:relative;
+    overflow:hidden;
+    background:#f5f2ee;
+    min-height:365px
+}
+.hero-photo {
+    position:absolute;
+    right:0;
+    top:0;
+    bottom:0;
+    width:52%;
+    background-image:url('../images/portrait.webp');
+    background-repeat:no-repeat;
+    background-position:center 40%;
+    background-size:auto 105%
+}
+.hero:after {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,#f5f2ee 0%,#f5f2ee 40%,rgba(245,242,238,.88) 48%,transparent 66%);
+    pointer-events:none
+}
+.hero-inner {
+    position:relative;
+    z-index:1;
+    min-height:365px;
+    display:flex;
+    align-items:center
+}
+.hero-copy {
+    max-width:610px;
+    padding:40px 0
+}
+.hero h1 {
+    font-size:clamp(2.3rem,4.5vw,3.7rem);
+    margin-bottom:8px
+}
+.subtitle {
+    font-size:1.2rem;
+    margin-bottom:20px
+}
+.rule {
+    width:48px;
+    height:3px;
+    background:var(--blue);
+    margin:18px 0 24px
+}
+.hero-motto {
+    font-family:Georgia,serif;
+    font-style:italic;
+    font-size:clamp(1.5rem,2.7vw,2.1rem);
+    color:var(--navy);
+    margin-bottom:15px
+}
+.hero-description {
+    max-width:480px;
+    margin:0
+}
+.section {
+    padding:54px 0;
+    scroll-margin-top:20px
+}
+.about-grid {
+    display:grid;
+    grid-template-columns:24% 1fr;
+    gap:42px
+}
+.prose p {
+    margin-bottom:12px
+}
+.expertise {
+    background:var(--warm)
+}
+.cards {
+    display:grid;
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:18px;
+    margin-top:28px
+}
+.card {
+    background:rgba(255,255,255,.86);
+    border-radius:10px;
+    padding:22px 18px;
+    box-shadow:0 4px 22px rgba(30,45,60,.04)
+}
+.card-icon {
+    font-size:2.2rem;
+    line-height:1;
+    color:#28516e;
+    margin-bottom:17px
+}
+.card h3 {
+    font-family:Georgia,serif;
+    font-size:1.16rem;
+    line-height:1.2;
+    margin-bottom:14px
+}
+.card p {
+    font-size:.88rem;
+    line-height:1.5;
+    margin-bottom:0
+}
+.philosophy {
+    background:#e8edf0 url('../images/mountains.webp') center 55%/cover no-repeat;
+    position:relative
+}
+.philosophy:before {
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(90deg,rgba(249,246,241,.96) 0%,rgba(249,246,241,.88) 38%,rgba(249,246,241,.25) 75%)
+}
+.philosophy-inner {
+    position:relative;
+    max-width:1120px
+}
+.philosophy-inner>p {
+    max-width:620px
+}
+.quote {
+    font:italic 1.7rem Georgia,serif;
+    color:var(--navy);
+    margin-bottom:14px
+}
+.contact-grid {
+    display:grid;
+    grid-template-columns:1fr 1.15fr;
+    gap:70px;
+    align-items:start
+}
+.contact-grid h3 {
+    font-size:1.35rem;
+    margin-bottom:2px
+}
+.contact-grid p {
+    margin-bottom:12px
+}
+.contact-grid address {
+    font-style:normal;
+    border-left:1px solid #d9d9d9;
+    padding-left:60px
+}
+.contact-grid address span {
+    display:inline-block;
+    width:28px;
+    color:var(--navy);
+    font-size:1.25rem
+}
+.contact-grid a {
+    text-decoration:none
+}
+.site-footer {
+    background:var(--navy);
+    color:#fff;
+    font-size:.83rem;
+    padding:22px 0
+}
+.footer-inner {
+    display:flex;
+    justify-content:space-between;
+    gap:20px
+}
+.footer-inner a {
+    text-decoration:none
+}
+.footer-inner a:hover {
+    color:#c9ddea
+}
+.legal {
+    max-width:800px;
+    min-height:55vh
+}
+.legal p {
+    margin-bottom:16px
+}
+.notice {
+    padding:16px;
+    background:#fff1d8;
+    border-left:4px solid #ba7e2b;
+    margin-bottom:24px
+}
+@media(max-width:980px) {
+    .header-inner {
+        flex-direction:column;
+        align-items:flex-start;
+        padding:18px 0;
+        gap:10px
+    }
+    .cards {
+        grid-template-columns:repeat(2,minmax(0,1fr))
+    }
+    .hero-photo {
+        width:55%
+    }
+    .hero:after {
+        background:linear-gradient(90deg,#f5f2ee 0%,#f5f2ee 35%,rgba(245,242,238,.8) 55%,transparent 82%)
+    }
+}
+@media(max-width:650px) {
+    .container {
+        width:calc(100% - 36px)
+    }
+    .brand {
+        font-size:1.08rem
+    }
+    .brand span {
+        display:block;
+        border:0;
+        margin:4px 0 0;
+        padding:0;
+        font-size:.65rem
+    }
+    .site-header nav {
+        gap:10px 16px
+    }
+    .site-header nav a {
+        font-size:.78rem
+    }
+    .hero {
+        padding-top:265px
+    }
+    .hero-photo {
+        width:100%;
+        height:285px;
+        bottom:auto;
+        background-position:center top
+    }
+    .hero:after {
+        background:linear-gradient(0deg,#f5f2ee 0%,transparent 20%);
+        height:285px;
+        bottom:auto
+    }
+    .hero-inner {
+        min-height:auto
+    }
+    .hero-copy {
+        padding:25px 0 40px
+    }
+    .hero h1 {
+        font-size:2.4rem
+    }
+    .section {
+        padding:40px 0
+    }
+    .about-grid,.contact-grid {
+        grid-template-columns:1fr;
+        gap:14px
+    }
+    .cards {
+        grid-template-columns:1fr
+    }
+    .card {
+        padding:22px
+    }
+    .philosophy:before {
+        background:rgba(249,246,241,.82)
+    }
+    .contact-grid address {
+        border-left:0;
+        padding-left:0
+    }
+    .footer-inner {
+        flex-direction:column;
+        gap:8px
+    }
+}
+/* Anpassungen November 2026 */
+.header-inner {
+    justify-content:flex-start
+}
+.hero-copy {
+    max-width:690px;
+    width:62%
+}
+.hero h1 {
+    font-size:clamp(2.05rem,4vw,3.25rem);
+    white-space:nowrap;
+    letter-spacing:-.025em
+}
+@media(max-width:1050px) and (min-width:651px) {
+    .hero-copy {
+        width:65%
+    }
+    .hero h1 {
+        font-size:clamp(1.8rem,3.8vw,2.8rem)
+    }
+}
+@media(max-width:650px) {
+    .hero-copy {
+        width:100%
+    }
+    .hero h1 {
+        white-space:normal;
+        font-size:clamp(2rem,8vw,2.4rem)
+    }
+}
+
+/* Navigation rechtsbündig */
+.header-inner {
+    justify-content: flex-end;
+}
+
+.site-header nav {
+    margin-left: auto;
+    justify-content: flex-end;
+}
+
+
+/* Überschriften auf rechtlichen Seiten */
+
+.legal h1 {
+    font-size: 2.2rem;
+    margin-bottom: 24px;
+}
+
+.legal h2 {
+    font-size: 1.35rem;
+    line-height: 1.3;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
